@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeydApp - Student Work Tracker</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='8' fill='%23000000'/%3E%3Cpath d='M8 8H12V14H20V8H24V24H20V18H12V24H8V8Z' fill='%23DD0000'/%3E%3Crect x='14' y='14' width='4' height='4' fill='%23FFCE00'/%3E%3C/svg%3E">
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -149,6 +152,12 @@
         .nav-item span {
             font-size: 12px;
         }
+
+        /* Explicitly set inactive nav item color in dark mode for better visibility */
+        .dark .nav-item {
+            color: #d4d4d8; /* A lighter gray for better contrast */
+        }
+
         .nav-item.active {
             color: var(--danger-color);
         }
@@ -209,7 +218,13 @@
     <!-- Header -->
     <header class="sticky top-0 z-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
+                 <!-- Logo -->
+                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#000000"/>
+                    <path d="M8 8H12V14H20V8H24V24H20V18H12V24H8V8Z" fill="#DD0000"/>
+                    <rect x="14" y="14" width="4" height="4" fill="#FFCE00"/>
+                </svg>
                  <h1 class="text-2xl font-bold" style="color: var(--base-color);"><span style="color: var(--danger-color);">Heyd</span>App</h1>
             </div>
            
